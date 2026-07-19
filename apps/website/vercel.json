@@ -1,3 +1,5 @@
 {
-  "installCommand": "pnpm install --no-frozen-lockfile"
+  "installCommand": "echo skipping install, no dependencies needed",
+  "buildCommand": "echo no build step needed",
+  "outputDirectory": "."
 }
