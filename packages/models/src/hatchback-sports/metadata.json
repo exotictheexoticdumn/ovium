@@ -1,0 +1,29 @@
+{
+  "name": "SportsHatchback",
+  "importName": "createSportsHatchback",
+  "category": "cars",
+  "tags": [
+    "car",
+    "hatchback",
+    "sports",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "hatchback-sports.png",
+  "description": "A compact sports hatchback.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "KartOoli",
+  "importName": "createKartOoli",
+  "category": "karts",
+  "tags": [
+    "kart",
+    "racing",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "kart-ooli.png",
+  "description": "A go-kart with a driver character built in.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

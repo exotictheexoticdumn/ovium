@@ -1,0 +1,28 @@
+{
+  "name": "Taxi",
+  "importName": "createTaxi",
+  "category": "cars",
+  "tags": [
+    "car",
+    "taxi",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "taxi.png",
+  "description": "A taxi cab, sedan body with checker livery.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

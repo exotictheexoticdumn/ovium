@@ -169,3 +169,35 @@ This is early — `0.0.x` versions, one model, API might still shift a bit as mo
 ## License
 
 Copyrighted, all rights reserved — see the main project for details. Not open source (yet, at least).
+
+## The vehicle catalog (Kenney Car Kit)
+
+Alongside the procedural car above, this package includes 25 real 3D vehicle models — sedans, SUVs, trucks, an ambulance, a fire truck, go-karts, tractors, and more — sourced from [Kenney's Car Kit](https://kenney.nl/assets/car-kit) (CC0 licensed, free for commercial use).
+
+These work differently from the procedural car: instead of building geometry from primitives at runtime, each one loads a real `.glb` file. That means these are **async** — call the function and `await` it, or use `.then()`:
+
+```js
+import { createSedan } from "@ovium/models";
+
+const sedan = await createSedan({ bodyColor: "#2e5fd9", wheelColor: "#111111" });
+scene.add(sedan.object3D);
+```
+
+Every vehicle in this batch shares the same two options — `bodyColor` and `wheelColor` — and the same `drive(input, delta)` animation as the procedural car, called the same way in your render loop:
+
+```js
+function tick() {
+  requestAnimationFrame(tick);
+  const delta = clock.getDelta();
+  sedan.animate.drive(input, delta);
+  renderer.render(scene, camera);
+}
+```
+
+Full list: `createSedan`, `createSportsSedan`, `createSportsHatchback`, `createSuv`, `createLuxurySuv`, `createTaxi`, `createVan`, `createTruck`, `createFlatbedTruck`, `createDeliveryTruck`, `createFlatDeliveryTruck`, `createAmbulance`, `createFireTruck`, `createPoliceCar`, `createGarbageTruck`, `createTractor`, `createPoliceTractor`, `createShovelTractor`, `createRaceCar`, `createFutureRaceCar`, `createKartOobi`, `createKartOodi`, `createKartOoli`, `createKartOopi`, `createKartOozi`.
+
+Note: the go-karts don't have a separate body node in their source file, so `bodyColor` won't do anything on those — `wheelColor` still works.
+
+### Credit
+
+Vehicle models in this package are built on [Kenney's Car Kit](https://kenney.nl/assets/car-kit), licensed CC0 (public domain). Credit isn't required by the license, but Kenney does great work funding an entire studio on donations/Patreon for assets like this — worth a look if you use these a lot: [kenney.nl/donate](https://kenney.nl/donate).

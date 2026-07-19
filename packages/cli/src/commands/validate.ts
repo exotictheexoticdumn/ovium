@@ -28,9 +28,23 @@ function validateOne(modelName: string): string[] {
     errors.push(`Missing index.ts`);
   } else {
     const contents = fs.readFileSync(indexPath, "utf-8");
-    for (const required of ["object3D", "parts", "set(", "animate", "dispose()"]) {
-      if (!contents.includes(required)) {
-        errors.push(`index.ts does not appear to return "${required}" — check the OviumModel shape`);
+    const isGltfBacked = contents.includes("createVehicleFromGLTF") || contents.includes("createModelFromGLTF");
+
+    if (isGltfBacked) {
+      // GLTF-backed models delegate the OviumModel shape to the shared core
+      // loader instead of constructing it inline — just confirm they wire
+      // up an asset URL and export a create function.
+      if (!contents.includes("ASSET_URL")) {
+        errors.push(`GLTF-backed model doesn't define an ASSET_URL`);
+      }
+      if (!/export (async )?function create/.test(contents)) {
+        errors.push(`No exported create*() factory function found`);
+      }
+    } else {
+      for (const required of ["object3D", "parts", "set(", "animate", "dispose()"]) {
+        if (!contents.includes(required)) {
+          errors.push(`index.ts does not appear to return "${required}" — check the OviumModel shape`);
+        }
       }
     }
   }
@@ -51,8 +65,13 @@ function validateOne(modelName: string): string[] {
     }
   }
 
-  if (!fs.existsSync(path.join(dir, "parts")) || fs.readdirSync(path.join(dir, "parts")).length === 0) {
-    errors.push(`No files found in parts/ — models should be broken into per-part files, not one monolith`);
+  const indexContents = fs.existsSync(indexPath) ? fs.readFileSync(indexPath, "utf-8") : "";
+  const isGltfBackedForPartsCheck = indexContents.includes("createVehicleFromGLTF") || indexContents.includes("createModelFromGLTF");
+
+  if (!isGltfBackedForPartsCheck) {
+    if (!fs.existsSync(path.join(dir, "parts")) || fs.readdirSync(path.join(dir, "parts")).length === 0) {
+      errors.push(`No files found in parts/ — models should be broken into per-part files, not one monolith`);
+    }
   }
 
   return errors;

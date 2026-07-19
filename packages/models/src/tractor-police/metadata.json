@@ -1,0 +1,29 @@
+{
+  "name": "PoliceTractor",
+  "importName": "createPoliceTractor",
+  "category": "agriculture",
+  "tags": [
+    "tractor",
+    "agriculture",
+    "police",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "tractor-police.png",
+  "description": "A tractor with police livery (yes, really — it's in the kit).",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

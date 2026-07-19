@@ -1,0 +1,29 @@
+{
+  "name": "ShovelTractor",
+  "importName": "createShovelTractor",
+  "category": "agriculture",
+  "tags": [
+    "tractor",
+    "agriculture",
+    "shovel",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "tractor-shovel.png",
+  "description": "A tractor with a front shovel/loader part.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

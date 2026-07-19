@@ -1,0 +1,29 @@
+{
+  "name": "FutureRaceCar",
+  "importName": "createFutureRaceCar",
+  "category": "racing",
+  "tags": [
+    "race",
+    "racing",
+    "futuristic",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "race-future.png",
+  "description": "A futuristic/concept race car.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

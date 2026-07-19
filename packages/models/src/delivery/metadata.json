@@ -1,0 +1,29 @@
+{
+  "name": "DeliveryTruck",
+  "importName": "createDeliveryTruck",
+  "category": "commercial",
+  "tags": [
+    "truck",
+    "delivery",
+    "commercial",
+    "low-poly"
+  ],
+  "version": "0.1.0",
+  "thumbnail": "delivery.png",
+  "description": "A boxy delivery van/truck.",
+  "editableProps": {
+    "bodyColor": {
+      "type": "color",
+      "default": "#ffffff",
+      "description": "Main body paint color (not available on karts, which have no separate body node)"
+    },
+    "wheelColor": {
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "animations": [
+    "drive"
+  ],
+  "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit"
+}

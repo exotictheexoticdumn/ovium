@@ -1,5 +1,34 @@
 [
   {
+    "name": "Ambulance",
+    "importName": "createAmbulance",
+    "category": "emergency",
+    "tags": [
+      "emergency",
+      "ambulance",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "ambulance.png",
+    "description": "An ambulance with opening rear doors.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "ambulance"
+  },
+  {
     "name": "Car",
     "importName": "createCar",
     "category": "vehicles",
@@ -67,5 +96,710 @@
       "enableTerrainFollow"
     ],
     "slug": "car"
+  },
+  {
+    "name": "DeliveryTruck",
+    "importName": "createDeliveryTruck",
+    "category": "commercial",
+    "tags": [
+      "truck",
+      "delivery",
+      "commercial",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "delivery.png",
+    "description": "A boxy delivery van/truck.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "delivery"
+  },
+  {
+    "name": "FlatDeliveryTruck",
+    "importName": "createFlatDeliveryTruck",
+    "category": "commercial",
+    "tags": [
+      "truck",
+      "delivery",
+      "commercial",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "delivery-flat.png",
+    "description": "A flat-front delivery truck.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "delivery-flat"
+  },
+  {
+    "name": "FireTruck",
+    "importName": "createFireTruck",
+    "category": "emergency",
+    "tags": [
+      "emergency",
+      "firetruck",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "firetruck.png",
+    "description": "A fire truck with a front grill part.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "firetruck"
+  },
+  {
+    "name": "GarbageTruck",
+    "importName": "createGarbageTruck",
+    "category": "municipal",
+    "tags": [
+      "municipal",
+      "garbage-truck",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "garbage-truck.png",
+    "description": "A garbage truck with a movable arm and trash part.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "garbage-truck"
+  },
+  {
+    "name": "SportsHatchback",
+    "importName": "createSportsHatchback",
+    "category": "cars",
+    "tags": [
+      "car",
+      "hatchback",
+      "sports",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "hatchback-sports.png",
+    "description": "A compact sports hatchback.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "hatchback-sports"
+  },
+  {
+    "name": "KartOobi",
+    "importName": "createKartOobi",
+    "category": "karts",
+    "tags": [
+      "kart",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "kart-oobi.png",
+    "description": "A go-kart with a driver character built in.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "kart-oobi"
+  },
+  {
+    "name": "KartOodi",
+    "importName": "createKartOodi",
+    "category": "karts",
+    "tags": [
+      "kart",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "kart-oodi.png",
+    "description": "A go-kart with a driver character built in.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "kart-oodi"
+  },
+  {
+    "name": "KartOoli",
+    "importName": "createKartOoli",
+    "category": "karts",
+    "tags": [
+      "kart",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "kart-ooli.png",
+    "description": "A go-kart with a driver character built in.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "kart-ooli"
+  },
+  {
+    "name": "KartOopi",
+    "importName": "createKartOopi",
+    "category": "karts",
+    "tags": [
+      "kart",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "kart-oopi.png",
+    "description": "A go-kart with a driver character built in.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "kart-oopi"
+  },
+  {
+    "name": "KartOozi",
+    "importName": "createKartOozi",
+    "category": "karts",
+    "tags": [
+      "kart",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "kart-oozi.png",
+    "description": "A go-kart with a driver character built in.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "kart-oozi"
+  },
+  {
+    "name": "PoliceCar",
+    "importName": "createPoliceCar",
+    "category": "emergency",
+    "tags": [
+      "emergency",
+      "police",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "police.png",
+    "description": "A police cruiser with a front grill part.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "police"
+  },
+  {
+    "name": "RaceCar",
+    "importName": "createRaceCar",
+    "category": "racing",
+    "tags": [
+      "race",
+      "racing",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "race.png",
+    "description": "A stylized race car.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "race"
+  },
+  {
+    "name": "FutureRaceCar",
+    "importName": "createFutureRaceCar",
+    "category": "racing",
+    "tags": [
+      "race",
+      "racing",
+      "futuristic",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "race-future.png",
+    "description": "A futuristic/concept race car.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "race-future"
+  },
+  {
+    "name": "Sedan",
+    "importName": "createSedan",
+    "category": "cars",
+    "tags": [
+      "car",
+      "sedan",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "sedan.png",
+    "description": "A standard low-poly sedan.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "sedan"
+  },
+  {
+    "name": "SportsSedan",
+    "importName": "createSportsSedan",
+    "category": "cars",
+    "tags": [
+      "car",
+      "sedan",
+      "sports",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "sedan-sports.png",
+    "description": "A sportier take on the sedan body style.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "sedan-sports"
+  },
+  {
+    "name": "Suv",
+    "importName": "createSuv",
+    "category": "cars",
+    "tags": [
+      "car",
+      "suv",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "suv.png",
+    "description": "A standard SUV body style.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "suv"
+  },
+  {
+    "name": "LuxurySuv",
+    "importName": "createLuxurySuv",
+    "category": "cars",
+    "tags": [
+      "car",
+      "suv",
+      "luxury",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "suv-luxury.png",
+    "description": "A luxury SUV variant.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "suv-luxury"
+  },
+  {
+    "name": "Taxi",
+    "importName": "createTaxi",
+    "category": "cars",
+    "tags": [
+      "car",
+      "taxi",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "taxi.png",
+    "description": "A taxi cab, sedan body with checker livery.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "taxi"
+  },
+  {
+    "name": "Tractor",
+    "importName": "createTractor",
+    "category": "agriculture",
+    "tags": [
+      "tractor",
+      "agriculture",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "tractor.png",
+    "description": "A farm tractor.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "tractor"
+  },
+  {
+    "name": "PoliceTractor",
+    "importName": "createPoliceTractor",
+    "category": "agriculture",
+    "tags": [
+      "tractor",
+      "agriculture",
+      "police",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "tractor-police.png",
+    "description": "A tractor with police livery (yes, really — it's in the kit).",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "tractor-police"
+  },
+  {
+    "name": "ShovelTractor",
+    "importName": "createShovelTractor",
+    "category": "agriculture",
+    "tags": [
+      "tractor",
+      "agriculture",
+      "shovel",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "tractor-shovel.png",
+    "description": "A tractor with a front shovel/loader part.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "tractor-shovel"
+  },
+  {
+    "name": "Truck",
+    "importName": "createTruck",
+    "category": "commercial",
+    "tags": [
+      "truck",
+      "commercial",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "truck.png",
+    "description": "A pickup truck.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "truck"
+  },
+  {
+    "name": "FlatbedTruck",
+    "importName": "createFlatbedTruck",
+    "category": "commercial",
+    "tags": [
+      "truck",
+      "flatbed",
+      "commercial",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "truck-flat.png",
+    "description": "A flatbed pickup truck.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "truck-flat"
+  },
+  {
+    "name": "Van",
+    "importName": "createVan",
+    "category": "commercial",
+    "tags": [
+      "van",
+      "commercial",
+      "low-poly"
+    ],
+    "version": "0.1.0",
+    "thumbnail": "van.png",
+    "description": "A cargo van body style.",
+    "editableProps": {
+      "bodyColor": {
+        "type": "color",
+        "default": "#ffffff",
+        "description": "Main body paint color (not available on karts, which have no separate body node)"
+      },
+      "wheelColor": {
+        "type": "color",
+        "default": "#1a1a1a"
+      }
+    },
+    "animations": [
+      "drive"
+    ],
+    "source": "Kenney Car Kit (CC0) — https://kenney.nl/assets/car-kit",
+    "slug": "van"
   }
 ]

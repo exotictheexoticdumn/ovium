@@ -1,12 +1,13 @@
 {
   "name": "@ovium/models",
-  "version": "0.0.1",
+  "version": "0.4.0",
   "description": "Code-generated, customizable, animatable low-poly 3D models for the web.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "assets"
   ],
   "license": "UNLICENSED",
   "publishConfig": {
