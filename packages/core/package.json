@@ -1,0 +1,26 @@
+{
+  "name": "@ovium/core",
+  "version": "0.0.2",
+  "description": "Shared runtime types and helpers for Ovium models",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "three": ">=0.150.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.1",
+    "three": "^0.170.0",
+    "typescript": "^5.6.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}

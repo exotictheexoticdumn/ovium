@@ -1,0 +1,27 @@
+{
+  "name": "@ovium/cli",
+  "version": "0.0.2",
+  "description": "Dev tooling for scaffolding, validating, and publishing Ovium models.",
+  "type": "module",
+  "bin": {
+    "ovium": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": ["dist"],
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

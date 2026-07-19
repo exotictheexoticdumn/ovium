@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ovium — models are code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://esm.sh/three@0.170.0",
+        "three/addons/": "https://esm.sh/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="wordmark">OVIUM</div>
+    <nav class="topnav">
+      <span class="navlink current">catalog</span>
+      <span class="navlink">docs</span>
+      <span class="navlink">npm</span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">no .glb &nbsp;·&nbsp; no .fbx &nbsp;·&nbsp; no exports</p>
+      <h1 class="hero-title">Models are<br />code.</h1>
+      <p class="hero-sub">Every model in Ovium is generated at runtime — legs, seats, doors, wheels, each its own editable part. Install one package, import a model by name, customize it like a component.</p>
+      <div class="install-line">
+        <span class="prompt">$</span>
+        <span class="cmd">npm install @ovium/models</span>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <div id="hero-canvas"></div>
+      <svg class="blueprint-overlay" viewBox="0 0 600 420" aria-hidden="true">
+        <g class="bp-lines">
+          <line x1="60" y1="360" x2="540" y2="360" />
+          <line x1="60" y1="352" x2="60" y2="368" />
+          <line x1="540" y1="352" x2="540" y2="368" />
+          <text x="300" y="386" text-anchor="middle">L 4.2m</text>
+
+          <line x1="565" y1="120" x2="565" y2="300" />
+          <line x1="557" y1="120" x2="573" y2="120" />
+          <line x1="557" y1="300" x2="573" y2="300" />
+          <text x="565" y="112" text-anchor="middle">H 1.1m</text>
+        </g>
+        <g class="bp-tags">
+          <circle cx="180" cy="200" r="3"></circle>
+          <line x1="180" y1="200" x2="120" y2="160" />
+          <text x="116" y="152" text-anchor="end">body.color</text>
+
+          <circle cx="130" cy="330" r="3"></circle>
+          <line x1="130" y1="330" x2="80" y2="290" />
+          <text x="76" y="282" text-anchor="end">wheels.radius</text>
+
+          <circle cx="420" cy="230" r="3"></circle>
+          <line x1="420" y1="230" x2="500" y2="200" />
+          <text x="504" y="196" text-anchor="start">lights.on</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="catalog-section">
+    <div class="catalog-heading">
+      <h2>Catalog</h2>
+      <span class="catalog-count" id="catalog-count">— models</span>
+    </div>
+    <div class="catalog-grid" id="catalog-grid"></div>
+  </section>
+
+  <footer class="site-footer">
+    <span>© Ovium — built by Erox</span>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Car",
+  "importName": "createCar",
+  "category": "vehicles",
+  "tags": ["car", "vehicle", "drivable", "low-poly"],
+  "version": "0.0.1",
+  "thumbnail": "car.png",
+  "description": "A low-poly, fully customizable car with drivable physics-lite behavior and terrain-following suspension.",
+  "editableProps": {
+    "body.color": { "type": "color", "default": "#c81e3a", "description": "Main body paint color" },
+    "body.roughness": { "type": "number", "default": 0.4 },
+    "body.metalness": { "type": "number", "default": 0.6 },
+    "wheels.color": { "type": "color", "default": "#111111" },
+    "wheels.radius": { "type": "number", "default": 0.38 },
+    "doors.color": { "type": "color", "default": "#c81e3a" },
+    "lights.on": { "type": "boolean", "default": true },
+    "lights.color": { "type": "color", "default": "#fff4d6" },
+    "interior.seatColor": { "type": "color", "default": "#1a1a1a" },
+    "interior.dashColor": { "type": "color", "default": "#222222" }
+  },
+  "animations": ["openDoor", "closeDoor", "toggleLights", "drive", "enableTerrainFollow"]
+}
