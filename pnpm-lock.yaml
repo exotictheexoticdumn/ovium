@@ -46,8 +46,8 @@ importers:
   packages/models:
     dependencies:
       '@ovium/core':
-        specifier: workspace:*
-        version: link:../core
+        specifier: ^0.0.1
+        version: 0.0.1(three@0.170.0)
     devDependencies:
       '@types/three':
         specifier: ^0.185.1
@@ -220,6 +220,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@ovium/core@0.0.1':
+    resolution: {integrity: sha512-LbEDGbS62b+RER2eKvIQr0PHY1iSVjZz76U2D1z/XlAp/hpcb/x0DgLXzhIug1wHyr65U5jrKTJvaZW4F+IoQw==}
+    peerDependencies:
+      three: '>=0.150.0'
+
   '@turbo/darwin-64@2.10.5':
     resolution: {integrity: sha512-ENvPwy3x5yS7MwNYHeWjqOBXkwIMp39Pd+/zXC6PoiNzF8EIvvLZOZZ+ny6L9x4WgS5vxUii2LM5gM+zjPdnWw==}
     cpu: [x64]
@@ -386,6 +391,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.28.1':
     optional: true
+
+  '@ovium/core@0.0.1(three@0.170.0)':
+    dependencies:
+      three: 0.170.0
 
   '@turbo/darwin-64@2.10.5':
     optional: true
