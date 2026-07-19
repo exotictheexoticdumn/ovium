@@ -1,6 +1,6 @@
 {
   "name": "@ovium/core",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Shared runtime types and helpers for Ovium models",
   "type": "module",
   "main": "./dist/index.js",

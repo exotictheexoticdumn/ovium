@@ -5,38 +5,44 @@
     "category": "vehicles",
     "tags": [
       "car",
-      "vehicle",
+      "buggy",
+      "off-road",
       "drivable",
       "low-poly"
     ],
-    "version": "0.0.1",
+    "version": "0.1.0",
     "thumbnail": "car.png",
-    "description": "A low-poly, fully customizable car with drivable physics-lite behavior and terrain-following suspension.",
+    "description": "A low-poly off-road buggy with an exposed roll cage, coilover suspension, and drivable physics-lite behavior.",
     "editableProps": {
-      "body.color": {
+      "frame.frameColor": {
         "type": "color",
-        "default": "#c81e3a",
-        "description": "Main body paint color"
+        "default": "#e8571f",
+        "description": "Roll cage tube color"
       },
-      "body.roughness": {
-        "type": "number",
-        "default": 0.4
-      },
-      "body.metalness": {
-        "type": "number",
-        "default": 0.6
+      "frame.panelColor": {
+        "type": "color",
+        "default": "#f2f2f2",
+        "description": "Nose/rear panel color"
       },
       "wheels.color": {
         "type": "color",
-        "default": "#111111"
+        "default": "#161616"
+      },
+      "wheels.rimColor": {
+        "type": "color",
+        "default": "#8a8a8a"
       },
       "wheels.radius": {
         "type": "number",
-        "default": 0.38
+        "default": 0.52
       },
-      "doors.color": {
+      "suspension.shockColor": {
         "type": "color",
-        "default": "#c81e3a"
+        "default": "#2b2b2b"
+      },
+      "suspension.coilColor": {
+        "type": "color",
+        "default": "#c94f1f"
       },
       "lights.on": {
         "type": "boolean",
@@ -48,16 +54,14 @@
       },
       "interior.seatColor": {
         "type": "color",
-        "default": "#1a1a1a"
+        "default": "#8a6a4a"
       },
-      "interior.dashColor": {
+      "interior.wheelColor": {
         "type": "color",
-        "default": "#222222"
+        "default": "#1a1a1a"
       }
     },
     "animations": [
-      "openDoor",
-      "closeDoor",
       "toggleLights",
       "drive",
       "enableTerrainFollow"

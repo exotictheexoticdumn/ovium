@@ -1,4 +1,4 @@
-import { BoxGeometry, Mesh, MeshStandardMaterial, Group } from "three";
+import { BoxGeometry, CylinderGeometry, TorusGeometry, Mesh, MeshStandardMaterial, Group } from "three";
 import type { CarInteriorOptions } from "../types.js";
 
 export function buildInterior(options: CarInteriorOptions = {}) {
@@ -6,39 +6,48 @@ export function buildInterior(options: CarInteriorOptions = {}) {
   group.name = "interior";
 
   const seatMaterial = new MeshStandardMaterial({
-    color: options.seatColor ?? "#1a1a1a",
-    roughness: 0.8,
+    color: options.seatColor ?? "#8a6a4a",
+    roughness: 0.85,
   });
 
-  const dashMaterial = new MeshStandardMaterial({
-    color: options.dashColor ?? "#222222",
+  const wheelMaterial = new MeshStandardMaterial({
+    color: options.wheelColor ?? "#1a1a1a",
     roughness: 0.6,
   });
 
-  const seatGeometry = new BoxGeometry(0.5, 0.5, 0.5);
-  const driverSeat = new Mesh(seatGeometry, seatMaterial);
-  driverSeat.position.set(-0.5, 0.6, 0.4);
-  driverSeat.name = "driverSeat";
+  // Bucket seat: a rounded backrest + base, sized to actually read from outside the cage.
+  const backrest = new Mesh(new CylinderGeometry(0.28, 0.28, 0.55, 12, 1, false, 0, Math.PI), seatMaterial);
+  backrest.rotation.z = Math.PI / 2;
+  backrest.rotation.y = Math.PI / 2;
+  backrest.position.set(-0.15, 0.85, 0);
 
-  const passengerSeat = new Mesh(seatGeometry, seatMaterial);
-  passengerSeat.position.set(-0.5, 0.6, -0.4);
-  passengerSeat.name = "passengerSeat";
+  const base = new Mesh(new BoxGeometry(0.5, 0.12, 0.5), seatMaterial);
+  base.position.set(0.05, 0.55, 0);
 
-  const dash = new Mesh(new BoxGeometry(0.3, 0.6, 1.6), dashMaterial);
-  dash.position.set(0.9, 0.75, 0);
-  dash.name = "dashboard";
+  group.add(backrest, base);
 
-  group.add(driverSeat, passengerSeat, dash);
+  // Steering wheel, mounted ahead of the seat.
+  const steeringWheel = new Mesh(new TorusGeometry(0.2, 0.025, 8, 20), wheelMaterial);
+  steeringWheel.position.set(0.55, 0.85, 0);
+  steeringWheel.rotation.y = Math.PI / 2.3;
+  steeringWheel.name = "steeringWheel";
+
+  const column = new Mesh(new CylinderGeometry(0.03, 0.03, 0.35, 8), wheelMaterial);
+  column.rotation.z = Math.PI / 2.6;
+  column.position.set(0.4, 0.72, 0);
+
+  group.add(steeringWheel, column);
 
   return {
     group,
     seatMaterial,
-    dashMaterial,
+    wheelMaterial,
+    steeringWheel,
     setSeatColor(color: string) {
       seatMaterial.color.set(color);
     },
-    setDashColor(color: string) {
-      dashMaterial.color.set(color);
+    setWheelColor(color: string) {
+      wheelMaterial.color.set(color);
     },
   };
 }

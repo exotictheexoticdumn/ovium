@@ -1,21 +1,18 @@
-export interface CarBodyOptions {
-  color?: string;
-  roughness?: number;
-  metalness?: number;
-  length?: number;
-  width?: number;
-  height?: number;
+export interface CarFrameOptions {
+  frameColor?: string;
+  panelColor?: string;
 }
 
 export interface CarWheelOptions {
   radius?: number;
   width?: number;
   color?: string;
+  rimColor?: string;
 }
 
-export interface CarDoorOptions {
-  open?: boolean;
-  color?: string;
+export interface CarSuspensionOptions {
+  shockColor?: string;
+  coilColor?: string;
 }
 
 export interface CarLightOptions {
@@ -26,13 +23,13 @@ export interface CarLightOptions {
 
 export interface CarInteriorOptions {
   seatColor?: string;
-  dashColor?: string;
+  wheelColor?: string;
 }
 
 export interface CarOptions {
-  body?: CarBodyOptions;
+  frame?: CarFrameOptions;
   wheels?: CarWheelOptions;
-  doors?: CarDoorOptions;
+  suspension?: CarSuspensionOptions;
   lights?: CarLightOptions;
   interior?: CarInteriorOptions;
 }

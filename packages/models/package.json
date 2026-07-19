@@ -1,6 +1,6 @@
 {
   "name": "@ovium/models",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Code-generated, customizable, animatable low-poly 3D models for the web.",
   "type": "module",
   "main": "./dist/index.js",
@@ -16,7 +16,7 @@
     "three": ">=0.150.0"
   },
   "dependencies": {
-    "@ovium/core": "^0.0.1"
+    "@ovium/core": "workspace:*"
   },
   "devDependencies": {
     "@types/three": "^0.185.1",
