@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ovium — model showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./model.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://esm.sh/three@0.170.0",
+        "three/addons/": "https://esm.sh/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="./index.html" style="text-decoration:none;">OVIUM<span class="dot">.</span></a>
+    <nav class="topnav">
+      <a class="nav-switch" href="./index.html"><span class="indicator"></span>catalog</a>
+      <a class="nav-switch" href="https://github.com/exotictheexoticdumn/ovium#readme" target="_blank" rel="noopener"><span class="indicator"></span>docs</a>
+      <a class="nav-switch" href="https://www.npmjs.com/org/ovium" target="_blank" rel="noopener"><span class="indicator"></span>npm</a>
+    </nav>
+  </header>
+
+  <main class="showcase">
+    <div class="showcase-viewer">
+      <div class="viewer-bezel">
+        <div id="model-canvas"></div>
+        <span class="drag-hint">drag to rotate</span>
+        <span class="viewer-status" id="viewer-status">loading…</span>
+      </div>
+    </div>
+
+    <div class="showcase-panel">
+      <p class="showcase-category" id="model-category">—</p>
+      <h1 class="showcase-title" id="model-name">Loading…</h1>
+      <p class="showcase-desc" id="model-desc"></p>
+      <div class="showcase-tags" id="model-tags"></div>
+
+      <div class="controls" id="model-controls">
+        <p class="controls-label">Customize</p>
+        <div class="controls-list" id="controls-list"></div>
+      </div>
+
+      <div class="showcase-snippet">
+        <p class="controls-label">Code</p>
+        <pre class="code-block" id="code-snippet"></pre>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© Ovium — built by Erox</span>
+  </footer>
+
+  <script type="module" src="./model.js"></script>
+</body>
+</html>

@@ -20,19 +20,19 @@
   <div class="grain"></div>
 
   <header class="topbar">
-    <div class="wordmark">OVIUM</div>
+    <div class="wordmark">OVIUM<span class="dot">.</span></div>
     <nav class="topnav">
-      <span class="navlink current">catalog</span>
-      <a class="navlink" href="https://github.com/exotictheexoticdumn/ovium#readme" target="_blank" rel="noopener">docs</a>
-      <a class="navlink" href="https://www.npmjs.com/org/ovium" target="_blank" rel="noopener">npm</a>
+      <span class="nav-switch active"><span class="indicator"></span>catalog</span>
+      <a class="nav-switch" href="https://github.com/exotictheexoticdumn/ovium#readme" target="_blank" rel="noopener"><span class="indicator"></span>docs</a>
+      <a class="nav-switch" href="https://www.npmjs.com/org/ovium" target="_blank" rel="noopener"><span class="indicator"></span>npm</a>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">no .glb &nbsp;·&nbsp; no .fbx &nbsp;·&nbsp; no exports</p>
+      <p class="eyebrow">no .glb downloads &nbsp;·&nbsp; no manual setup</p>
       <h1 class="hero-title">Models are<br />code.</h1>
-      <p class="hero-sub">Every model in Ovium is generated at runtime — legs, seats, doors, wheels, each its own editable part. Install one package, import a model by name, customize it like a component.</p>
+      <p class="hero-sub">Every model in Ovium imports like a component — install one package, customize it through props, drop it in your scene. 26 models and counting.</p>
       <div class="install-line">
         <span class="prompt">$</span>
         <span class="cmd">npm install @ovium/models</span>
@@ -40,34 +40,14 @@
     </div>
 
     <div class="hero-stage">
-      <div id="hero-canvas"></div>
-      <span class="drag-hint">drag to rotate</span>
-      <svg class="blueprint-overlay" viewBox="0 0 600 420" aria-hidden="true">
-        <g class="bp-lines">
-          <line x1="60" y1="360" x2="540" y2="360" />
-          <line x1="60" y1="352" x2="60" y2="368" />
-          <line x1="540" y1="352" x2="540" y2="368" />
-          <text x="300" y="386" text-anchor="middle">L 4.2m</text>
-
-          <line x1="565" y1="120" x2="565" y2="300" />
-          <line x1="557" y1="120" x2="573" y2="120" />
-          <line x1="557" y1="300" x2="573" y2="300" />
-          <text x="565" y="112" text-anchor="middle">H 1.1m</text>
-        </g>
-        <g class="bp-tags">
-          <circle cx="180" cy="200" r="3"></circle>
-          <line x1="180" y1="200" x2="120" y2="160" />
-          <text x="116" y="152" text-anchor="end">frame.frameColor</text>
-
-          <circle cx="130" cy="330" r="3"></circle>
-          <line x1="130" y1="330" x2="80" y2="290" />
-          <text x="76" y="282" text-anchor="end">wheels.radius</text>
-
-          <circle cx="420" cy="230" r="3"></circle>
-          <line x1="420" y1="230" x2="500" y2="200" />
-          <text x="504" y="196" text-anchor="start">lights.on</text>
-        </g>
-      </svg>
+      <div class="gauge-cluster">
+        <svg class="gauge-ticks" id="gauge-ticks" viewBox="0 0 400 400"></svg>
+        <div class="gauge-viewport">
+          <div id="hero-canvas"></div>
+          <span class="drag-hint">drag to rotate</span>
+          <span class="gauge-readout" id="gauge-readout">SEDAN</span>
+        </div>
+      </div>
     </div>
   </section>
 
